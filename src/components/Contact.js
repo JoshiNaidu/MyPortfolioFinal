@@ -91,7 +91,7 @@ const Contact = () => {
       </div>
 
       <div className="text-center mt-20 pt-8 border-t border-slate-700">
-        <p className="text-gray-400">© 2024 Matta Joshi. Built with React.js and Three.js</p>
+        <p className="text-gray-400">© 2025 Matta Joshi. Built with React.js and Three.js</p>
       </div>
     </div>
   )

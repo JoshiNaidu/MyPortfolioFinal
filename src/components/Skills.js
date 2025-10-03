@@ -49,17 +49,39 @@ const OrbitingSkill = ({ name, color, radius, angleSpeed, index }) => {
 }
 
 const Simple3DSkills = () => {
-  const skills = [
-    { name: "ReactJS", color: "#61DAFB" },
-    { name: "JavaScript", color: "#F7DF1E" },
-    { name: "Angular", color: "#DD0031" },
-    { name: "WordPress", color: "#21759B" },
-    { name: "HTML5", color: "#E34F26" },
-    { name: "CSS3", color: "#1572B6" },
-    { name: "Bootstrap", color: "#7952B3" },
-    { name: "Material UI", color: "#0081CB" },
-    { name: "Git", color: "#F05032" },
-  ]
+const skills = [
+  { name: "ReactJS", color: "#61DAFB" },
+  { name: "React Native", color: "#88C6F9" },
+  { name: "JavaScript", color: "#F7DF1E" },
+  { name: "TypeScript", color: "#3178C6" },
+  { name: "Angular", color: "#DD0031" },
+  { name: "HTML5", color: "#E34F26" },
+  { name: "CSS3", color: "#1572B6" },
+  { name: "Bootstrap", color: "#7952B3" },
+  { name: "Material UI", color: "#0081CB" },
+  { name: "WordPress", color: "#21759B" },
+  { name: "Git", color: "#F05032" },
+
+  // Backend & APIs
+  { name: "Node.js", color: "#8CC84B" },
+  { name: "Express", color: "#000000" },
+  { name: "REST APIs", color: "#3AA0D9" },
+  { name: "GraphQL", color: "#E10098" },
+
+  // Databases
+  { name: "MongoDB", color: "#47A248" },
+  { name: "SQL (Postgres/MySQL)", color: "#336791" },
+
+  // Auth & Dev Tools
+  { name: "JWT / Auth", color: "#FF8C00" },
+  { name: "Docker", color: "#2496ED" },
+
+  // Cloud & DevOps / Hosting
+  { name: "AWS (EC2/S3/Amplify)", color: "#FF9900" },
+  { name: "CI/CD", color: "#00AEEF" },
+  { name: "Domain management", color: "#6A5ACD" }
+];
+
 
   return (
     <>
@@ -101,49 +123,90 @@ const Skills = () => {
     checkWebGL()
   }, [])
 
-  const skillCategories = {
-    frontend: {
-      title: "Frontend Development",
-      skills: [
-        { name: "ReactJS", level: 95, color: "bg-blue-500" },
-        { name: "JavaScript", level: 90, color: "bg-yellow-500" },
-        { name: "HTML5", level: 95, color: "bg-orange-500" },
-        { name: "CSS3", level: 90, color: "bg-blue-600" },
-        { name: "Bootstrap", level: 85, color: "bg-purple-600" },
-        { name: "Material UI", level: 80, color: "bg-blue-400" },
-      ],
-    },
-    backend: {
-      title: "Backend & Tools",
-      skills: [
-        { name: "WordPress", level: 85, color: "bg-blue-700" },
-        { name: "PHP", level: 75, color: "bg-purple-700" },
-        { name: "Git", level: 90, color: "bg-red-500" },
-        { name: "Angular", level: 80, color: "bg-red-600" },
-      ],
-    },
-    other: {
-      title: "Other Skills",
-      skills: [
-        { name: "Problem Solving", level: 95, color: "bg-green-500" },
-        { name: "Team Leadership", level: 85, color: "bg-indigo-500" },
-        { name: "Project Management", level: 80, color: "bg-pink-500" },
-        { name: "API Integration", level: 90, color: "bg-teal-500" },
-      ],
-    },
-  }
+const skillCategories = {
+  frontend: {
+    title: "Frontend Development",
+    skills: [
+      { name: "ReactJS", level: 95, color: "bg-blue-500" },
+      { name: "React Native", level: 85, color: "bg-cyan-500" },
+      { name: "JavaScript", level: 90, color: "bg-yellow-500" },
+      { name: "TypeScript", level: 80, color: "bg-blue-700" },
+      { name: "Angular", level: 80, color: "bg-red-600" },
+      { name: "HTML5", level: 95, color: "bg-orange-500" },
+      { name: "CSS3", level: 90, color: "bg-blue-600" },
+      { name: "Bootstrap", level: 85, color: "bg-purple-600" },
+      { name: "Material UI", level: 80, color: "bg-blue-400" },
+    ],
+  },
+  backend: {
+    title: "Backend & Tools",
+    skills: [
+      { name: "Node.js", level: 90, color: "bg-green-600" },
+      { name: "Express", level: 85, color: "bg-gray-800" },
+      { name: "REST APIs", level: 90, color: "bg-teal-600" },
+      { name: "GraphQL", level: 75, color: "bg-pink-600" },
+      { name: "MongoDB", level: 85, color: "bg-green-700" },
+      { name: "SQL (Postgres/MySQL)", level: 80, color: "bg-indigo-700" },
+      { name: "JWT / Auth", level: 80, color: "bg-orange-600" },
+      { name: "Docker", level: 70, color: "bg-blue-500" },
+      { name: "Git", level: 90, color: "bg-red-500" },
+      { name: "WordPress", level: 85, color: "bg-blue-700" },
+      { name: "PHP", level: 75, color: "bg-purple-700" },
+    ],
+  },
+  cloud: {
+    title: "Cloud & Hosting",
+    skills: [
+      { name: "AWS (EC2/S3/Amplify)", level: 80, color: "bg-yellow-600" },
+      { name: "CI/CD", level: 75, color: "bg-sky-500" },
+      { name: "Domain Management", level: 85, color: "bg-indigo-600" },
+    ],
+  },
+  other: {
+    title: "Other Skills",
+    skills: [
+      { name: "Problem Solving", level: 95, color: "bg-green-500" },
+      { name: "Team Leadership", level: 85, color: "bg-indigo-500" },
+      { name: "Project Management", level: 80, color: "bg-pink-500" },
+      { name: "API Integration", level: 90, color: "bg-teal-500" },
+    ],
+  },
+};
 
-  const skills3D = [
-    { name: "ReactJS", color: "#61DAFB" },
-    { name: "JavaScript", color: "#F7DF1E" },
-    { name: "Angular", color: "#DD0031" },
-    { name: "WordPress", color: "#21759B" },
-    { name: "HTML5", color: "#E34F26" },
-    { name: "CSS3", color: "#1572B6" },
-    { name: "Bootstrap", color: "#7952B3" },
-    { name: "Material UI", color: "#0081CB" },
-    { name: "Git", color: "#F05032" },
-  ]
+const skills3D = [
+  // Frontend
+  { name: "ReactJS", color: "#61DAFB" },
+  { name: "React Native", color: "#88C6F9" },
+  { name: "JavaScript", color: "#F7DF1E" },
+  { name: "TypeScript", color: "#3178C6" },
+  { name: "Angular", color: "#DD0031" },
+  { name: "HTML5", color: "#E34F26" },
+  { name: "CSS3", color: "#1572B6" },
+  { name: "Bootstrap", color: "#7952B3" },
+  { name: "Material UI", color: "#0081CB" },
+
+  // Backend
+  { name: "Node.js", color: "#8CC84B" },
+  { name: "Express", color: "#000000" },
+  { name: "REST APIs", color: "#3AA0D9" },
+  { name: "GraphQL", color: "#E10098" },
+
+  // Databases
+  { name: "MongoDB", color: "#47A248" },
+  { name: "SQL (Postgres/MySQL)", color: "#336791" },
+
+  // Cloud / DevOps
+  { name: "AWS (EC2/S3/Amplify)", color: "#FF9900" },
+  { name: "Docker", color: "#2496ED" },
+  { name: "CI/CD", color: "#00AEEF" },
+  { name: "Domain Management", color: "#6A5ACD" },
+
+  // CMS & Tools
+  { name: "WordPress", color: "#21759B" },
+  { name: "PHP", color: "#777BB4" },
+  { name: "Git", color: "#F05032" },
+];
+
 
   const Fallback3D = () => (
     <div className="h-[600px] w-full bg-slate-900/50 rounded-xl border border-slate-700 mb-8 flex items-center justify-center relative overflow-hidden">
